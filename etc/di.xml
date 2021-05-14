@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Amasty\PromoBanners\Model\Rule" type="Labelident\PluginAmastyPromoBanners\Model\CustomRule"/>
+    <preference for="Amasty\PromoBanners\Model\Source\Position" type="Labelident\PluginAmastyPromoBanners\Model\Source\CustomPosition"/>
+    <preference for="Amasty\PromoBanners\Helper\Data" type="Labelident\PluginAmastyPromoBanners\Helper\CustomData"/>
+    <preference for="Amasty\PromoBanners\Block\Adminhtml\Banners\Edit\Tab\Content" type="Labelident\PluginAmastyPromoBanners\Block\Adminhtml\Banners\Edit\Tab\Content"/>
+    <preference for="Amasty\PromoBanners\Block\Banner" type="Labelident\PluginAmastyPromoBanners\Block\Banner"/>
+
+</config>

@@ -1,0 +1,22 @@
+{
+    "name": "magefactory/module-plugin-amasty-promo-banners",
+    "description": "Plugin to add new positions for amasty promo banners",
+ 	"require": {
+    "magento/module-store": ">100.0",
+    "magento/module-backend": ">100.0",
+    "magento/framework": ">100.0"
+  },
+  "type": "magento2-module",
+  "version": "100.0.1",
+  "license": [
+    "Commercial"
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Magefactory\\PluginAmastyPromoBanners\\": ""
+    }
+  }
+}

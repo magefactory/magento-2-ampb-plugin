@@ -1,5 +1,5 @@
 <?php
-namespace Labelident\PluginAmastyPromoBanners\Block;
+namespace Magefactory\PluginAmastyPromoBanners\Block;
 
 use Amasty\PromoBanners\Block\Banner\ProductListing;
 use Magento\Framework\UrlInterface;

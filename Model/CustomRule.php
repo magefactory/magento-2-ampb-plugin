@@ -6,7 +6,7 @@
  */
 
 
-namespace Labelident\PluginAmastyPromoBanners\Model;
+namespace Magefactory\PluginAmastyPromoBanners\Model;
 
 use Magento\Catalog\Api\Data\ProductInterface;
 use Amasty\PromoBanners\Model\Rule;

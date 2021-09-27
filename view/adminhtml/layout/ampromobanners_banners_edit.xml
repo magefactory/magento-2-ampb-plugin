@@ -2,7 +2,7 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="left">
-            <block name="ampromobanners_js" template="Labelident_PluginAmastyPromoBanners::js.phtml" />
+            <block name="ampromobanners_js" template="Magefactory_PluginAmastyPromoBanners::js.phtml" />
         </referenceContainer>
     </body>
 </page>

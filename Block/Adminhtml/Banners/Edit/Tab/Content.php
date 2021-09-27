@@ -6,12 +6,12 @@
  */
 
 
-namespace Labelident\PluginAmastyPromoBanners\Block\Adminhtml\Banners\Edit\Tab;
+namespace Magefactory\PluginAmastyPromoBanners\Block\Adminhtml\Banners\Edit\Tab;
 
 use Magento\Backend\Block\Widget\Form\Generic;
 use Magento\Backend\Block\Widget\Tab\TabInterface;
 use Amasty\PromoBanners\Model\Rule;
-use Labelident\PluginAmastyPromoBanners\Model\CustomRule;
+use Magefactory\PluginAmastyPromoBanners\Model\CustomRule;
 use Magento\Config\Model\Config\Source\Yesno;
 use Magento\Framework\UrlInterface;
 

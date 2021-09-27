@@ -6,11 +6,11 @@
  */
 
 
-namespace Labelident\PluginAmastyPromoBanners\Model\Source;
+namespace Magefactory\PluginAmastyPromoBanners\Model\Source;
 
 use Magento\Framework\Option\ArrayInterface;
 use Amasty\PromoBanners\Model\Rule;
-use Labelident\PluginAmastyPromoBanners\Model\CustomRule;
+use Magefactory\PluginAmastyPromoBanners\Model\CustomRule;
 use Amasty\PromoBanners\Model\Source\Position;
 
 class CustomPosition extends Position

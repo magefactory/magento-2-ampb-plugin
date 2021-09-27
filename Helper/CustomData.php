@@ -6,11 +6,11 @@
  */
 
 
-namespace Labelident\PluginAmastyPromoBanners\Helper;
+namespace Magefactory\PluginAmastyPromoBanners\Helper;
 
 use Amasty\PromoBanners\Helper\Data;
 use Amasty\PromoBanners\Model\Rule;
-use Labelident\PluginAmastyPromoBanners\Model\CustomRule;
+use Magefactory\PluginAmastyPromoBanners\Model\CustomRule;
 
 class CustomData extends Data
 {

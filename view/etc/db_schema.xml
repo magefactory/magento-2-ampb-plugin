@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="amasty_banner_rule">
+        <column xsi:type="text" name="custom_css_class" nullable="true" comment="Custom CSS Class"/>
+        <column xsi:type="int" name="products_layout" nullable="false" default="4" comment="Products Layout"/>
+    </table>
+</schema>

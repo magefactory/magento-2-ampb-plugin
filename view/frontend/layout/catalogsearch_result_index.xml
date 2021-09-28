@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2020 Amasty (https://www.amasty.com)
+ * @package Amasty_PromoBanners
+ */
+-->
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="div.sidebar.main">
+            <block after="-" class="Amasty\PromoBanners\Block\Container"
+                   name="ambanners.sidebar.search" template="container.phtml">
+                <action method="setPosition">
+                    <argument name="position" xsi:type="string">19</argument>
+                </action>
+            </block>
+        </referenceContainer>
+        <referenceContainer name="content">
+            <block after="-" class="Amasty\PromoBanners\Block\Container"
+                   name="ambanners.search.bottom" template="container.phtml">
+                <action method="setPosition">
+                    <argument name="position" xsi:type="string">20</argument>
+                </action>
+            </block>
+        </referenceContainer>
+<!-- N.W. Promobanner removed from sidebar on search result pages -->
+        <referenceContainer name="div.sidebar.additional">
+            <referenceBlock name="ambanners.right" remove="true" />
+        </referenceContainer>
+
+        <referenceContainer name="div.sidebar.main">
+            <referenceBlock name="ambanners.left" remove="true" />
+        </referenceContainer>
+    </body>
+</page>

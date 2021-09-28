@@ -5,5 +5,5 @@
     <preference for="Amasty\PromoBanners\Helper\Data" type="Magefactory\PluginAmastyPromoBanners\Helper\CustomData"/>
     <preference for="Amasty\PromoBanners\Block\Adminhtml\Banners\Edit\Tab\Content" type="Magefactory\PluginAmastyPromoBanners\Block\Adminhtml\Banners\Edit\Tab\Content"/>
     <preference for="Amasty\PromoBanners\Block\Banner" type="Magefactory\PluginAmastyPromoBanners\Block\Banner"/>
-
+    <preference for="Amasty\PromoBanners\Block\Banner\ProductListing" type="Magefactory\PluginAmastyPromoBanners\Block\Banner\ProductListing"/>
 </config>

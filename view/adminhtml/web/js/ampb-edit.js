@@ -107,8 +107,7 @@ define([
                 || value.indexOf('17') != -1
                 || value.indexOf('18') != -1
                 || value.indexOf('21') != -1
-                || value.indexOf('23') != -1
-                || value.indexOf('24') != -1)
+                || value.indexOf('23') != -1)
         ) {
                 this.showHideField('show_on_products', true);
                 this.showHideContainer('banner_productcond_fieldset', true);

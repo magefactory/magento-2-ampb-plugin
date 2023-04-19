@@ -1,0 +1,104 @@
+<?php
+
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2020 Amasty (https://www.amasty.com)
+ * @package Amasty_PromoBanners
+ */
+?>
+<?php /** @var $block \Amasty\PromoBanners\Block\Banner\ProductListing */ ?>
+<?php
+$products = $this->getData('products');
+$catalogHelper = $this->helper('Magento\Catalog\Helper\Output');
+$listingBlock = $block->getProductListingBlock();
+?>
+<div class="block">
+    <div class="products wrapper grid products-grid amasty-banners">
+        <ol class="products list items product-items amasty-banner-items">
+            <?php /** @var \Magento\Catalog\Model\Product $product */
+            foreach ($products as $product) : ?>
+                <li class="item product product-item">
+                    <div class="product-item-info">
+                        <a href="<?= $product->getProductUrl() ?>" title="<?= $product->getName() ?>" class="product-image"></a>
+                        <?php $productImage = $listingBlock->getImage($product, 'category_page_grid'); ?>
+                        <a href="<?= $product->getProductUrl() ?>" class="product photo product-item-photo" tabindex="-1">
+                            <?= $productImage->toHtml(); ?>
+                        </a>
+                        <div class="product details product-item-details">
+                            <div class="sku">
+                                <div class="label"><?= __('SKU-nbr.: '); ?> <?= $product->getSku(); ?></div>
+                            </div>
+                                <strong class="product name product-item-name product-shortname">
+                                    <a class="product-item-link" href="<?= $product->getProductUrl() ?>">
+                                        <?php // N.W. Produkt Kurztitel wird rausgerendert anstatt von ProductName
+                                        ?>
+                                        <?= $product->getZshortname(); ?>
+                                    </a>
+                                </strong>
+
+                                <div class="price-box">
+                                    <?= $listingBlock->getProductPrice($product) ?>
+                                </div>
+
+                                <div class="product-item-inner">
+								<?php /* N.W. - Add shipping costs info link to product listing */ ?>
+                              	<div class="hint-shipping" style="margin-top: 0px; margin-bottom: -10px;"><a class="click-shipping-costs-info"><?= __('Shipping costs information'); ?></a></div>
+                             	<?php /* N.W. adding delivery time */?>
+								<?php include($block->getTemplateFile('Magento_Theme::html/delivery-time.phtml'))?>
+                                    <div class="product actions product-item-actions" style="margin-top: -10px;">
+
+                                        <div class="actions-primary">
+												<?php $postParams = $listingBlock->getAddToCartPostParams($product); ?>
+                                                <form data-role="tocart-form" action="<?= $postParams['action']; ?>" method="post">
+                                                    <input type="hidden" name="product" value="<?= $postParams['data']['product']; ?>"/>
+                                                    <input type="hidden" name="uenc" value="<?= $postParams['data']['uenc']; ?>"/>
+                                                    <input name="form_key" type="hidden" value="<?= $block->getFormKey() ?>"/>
+                                                    <button type="submit" title="<?= $listingBlock->escapeHtml(__('Add to Cart')); ?>" class="action tocart primary">
+                                                        <span><?= __('Add to Cart') ?></span>
+                                                    </button>
+                                                </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <strong class="product name product-item-name">
+                                    <a class="product-item-link" href="<?= $product->getProductUrl() ?>">
+                                        <?= $catalogHelper->productAttribute($product, $product->getName(), 'name'); ?>
+                                    </a>
+                                </strong>
+                                <div class="list-bullet">
+                                    <?= /* @escapeNotVerified */ $catalogHelper->productAttribute($product, $product->getShortDescription(), 'short_description') ?>
+                                </div>
+                            <?php //A.N. - add read more buttons to display product's full infos ?>
+                            <div class="read-more more"><span><?= __('Show more') ?></span></div>
+                            <div class="read-more less"><span><?= __('Show less') ?></span></div>
+                        </div>
+                    </div>
+                </li>
+            <?php endforeach; ?>
+        </ol>
+    </div>
+</div>
+<?php if (!$listingBlock->isRedirectToCartEnabled()) : ?>
+    <script type="text/x-magento-init">
+        {
+        "[data-role=tocart-form], .form.map.checkout": {
+            "catalogAddToCart": {}
+        }
+    }
+</script>
+<?php //A.N. - js for fast comparison  ?>
+<script>
+    require(['jquery'], function ($) {
+    $('.read-more.more').on('click', function (){
+  $('.product-item-details').addClass('expanded');
+  $('.read-more.more').hide();
+  $('.read-more.less').show();
+})
+$('.read-more.less').on('click', function (){
+  $('.product-item-details').removeClass('expanded');
+  $('.read-more.less').hide();
+  $('.read-more.more').show();
+});
+});
+</script>
+<?php endif; ?>

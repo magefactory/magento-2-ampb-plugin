@@ -1,21 +1,46 @@
 .catalog-product-view .ambanners {
     &.ambanner-7 {
-	    order: 5;
+	    order: 50;
     }
     &.ambanner-18 {
-        order: 9;
+        order: 90;
     }
     &.ambanner-21 {
-        order: 3;
+        order: 30;
         float: right;
         width: 45%;
     }
+    &.ambanner-23 {
+        margin-top: 20px;
+    }
+}
+.catalog-category-view .ambanners {
+    &.ambanner-24 {
+        max-width: max-content;
+        margin: 10px 0 25px;
+    }
+}
+.sidebar.sidebar-main-alt {
+    width: 25%;
+    clear: left;
+    padding-right: 2%;
+}
+.stock.available span {
+    white-space: inherit;
+}
+.ambanners .ampb-4-products-row .grid.products-grid .items.product-items .product-item .product-item-info .product-item-details .read-more {
+    display: none !important;
 }
 @media only screen and (max-width: 1023px) {
     .catalog-product-view .ambanners {
         &.ambanner-21 {
             width: 48%;
         }
+    }
+    .sidebar.sidebar-main-alt {
+        order: 2;
+        width: 100%;
+        padding: inherit;
     }
 }
 @media only screen and (max-width: 767px) {

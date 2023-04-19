@@ -41,7 +41,7 @@ define([
                 function showCssClassField() {
                     if ($("#ampromobanners_show_products option:selected").val() == 0)
                         $(".field-products_layout").hide();
-                    else 
+                    else
                         $(".field-products_layout").show();
                 }
                 showCssClassField();
@@ -100,14 +100,16 @@ define([
             });
 
             if (value != null &&
-                    (value.indexOf('3') != -1
-                    || value.indexOf('6') != -1
-                    || value.indexOf('7') != -1
-                    || value.indexOf('10') != -1
-                    || value.indexOf('17') != -1
-                    || value.indexOf('18') != -1
-                    || value.indexOf('21') != -1)
-            ) {
+                (value.indexOf('3') != -1
+                || value.indexOf('6') != -1
+                || value.indexOf('7') != -1
+                || value.indexOf('10') != -1
+                || value.indexOf('17') != -1
+                || value.indexOf('18') != -1
+                || value.indexOf('21') != -1
+                || value.indexOf('23') != -1
+                || value.indexOf('24') != -1)
+        ) {
                 this.showHideField('show_on_products', true);
                 this.showHideContainer('banner_productcond_fieldset', true);
             } else {

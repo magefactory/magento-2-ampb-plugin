@@ -37,7 +37,10 @@ class CustomData extends Data
             CustomRule::POS_PROD_PAGE_BELOW_ACTIONS   =>__('Product Page (Below Actions Buttons)'),
             CustomRule::POS_CATALOG_SEARCH_SIDEBAR_MAIN   =>__('Catalog Search (Sidebar main)'),
             CustomRule::POS_CATALOG_SEARCH_BOTTOM   =>__('Catalog Search (Bottom)'),
-            CustomRule::POS_PROD_PAGE_BELOW_TIER  =>__('Product Page (Below Tier Prices)')
+            CustomRule::POS_PROD_PAGE_BELOW_TIER  =>__('Product Page (Below Tier Prices)'),
+            CustomRule::POS_SIDEBAR_MAIN_ALTERNATIVE  =>__('Sidebar Main Alternative'),
+            CustomRule::POS_PROD_PAGE_AFTER_PRICE  =>__('Product Page After Price'),
+            CustomRule::POS_CATEGORY_PAGE_AFTER_PRICE  =>__('Category Page After Price')
         ];
         return $positions;
     }

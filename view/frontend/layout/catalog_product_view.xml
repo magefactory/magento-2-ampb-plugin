@@ -16,6 +16,12 @@
                     <argument name="position" xsi:type="string">17</argument>
                 </action>
             </block>
+            <block class="Amasty\PromoBanners\Block\Container"
+                    name="ambanners.product_page_after_price" template="container.phtml">
+                <action method="setPosition">
+                    <argument name="position" xsi:type="string">23</argument>
+                </action>
+            </block>
    </referenceBlock>
    <referenceBlock name="product.info.main">
             <block class="Amasty\PromoBanners\Block\Container" after="-"

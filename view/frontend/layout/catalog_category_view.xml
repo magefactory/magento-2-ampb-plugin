@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2020 Amasty (https://www.amasty.com)
+ * @package Amasty_PromoBanners
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="columns">
+            <container name="div.sidebar.alt" htmlTag="div" htmlClass="sidebar sidebar-main-alt" after="div.sidebar.main">
+                <container name="sidebar.alt" as="sidebar_alt" label="Sidebar Main Alternative">
+                    <block after="-" class="Amasty\PromoBanners\Block\Container"
+                    name="ambanners.sidebar.alt" template="container.phtml">
+                        <action method="setPosition">
+                            <argument name="position" xsi:type="string">22</argument>
+                        </action>
+                    </block>
+                </container>
+            </container>
+        </referenceContainer>
+        <referenceBlock name="category.products.list">
+            <block before="category.product.list.additional" class="Amasty\PromoBanners\Block\Container"
+            name="ambanners.category_page_after_price" template="container.phtml">
+                <action method="setPosition">
+                    <argument name="position" xsi:type="string">24</argument>
+                </action>
+            </block>
+        </referenceBlock>
+    </body>
+</page>
